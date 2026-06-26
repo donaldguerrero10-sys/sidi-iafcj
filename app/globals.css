@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue:   #123DB5;
+  --purple: #7F3FE5;
+  --lime:   #B8E04F;
+  --ink:    #1F1B18;
+  --grad:   linear-gradient(135deg, #123DB5 0%, #7F3FE5 100%);
+}
+
+body { font-family: "Inter", ui-sans-serif, system-ui, sans-serif; }
+
+.sidi-input {
+  @apply w-full rounded-xl border border-stone-200 px-3.5 py-2.5 text-sm outline-none
+         transition-all focus:border-brand-blue focus:ring-2 focus:ring-brand-blue/20;
+}
+.sidi-btn-primary {
+  @apply rounded-xl px-4 py-2.5 text-sm font-semibold text-white transition-opacity hover:opacity-90;
+  background: var(--grad);
+}
+.sidi-card {
+  @apply rounded-2xl border border-stone-200 bg-white;
+}
+.sidi-pulse { animation: ping 1.8s cubic-bezier(0,0,.2,1) infinite; }
+@keyframes ping { 75%,100% { transform: scale(2.2); opacity: 0; } }
